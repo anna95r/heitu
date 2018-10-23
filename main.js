@@ -3,12 +3,12 @@ Vue.component("the-novel", {
     template: `
     <div  v-bind:key="book.id">
         <div class="row">
-            <div class="col-md-3 col-xs-12">
+            <div class="col-md-3 col-xs-3">
                 <a v-bind:href="book.address" target="_blank">
                     <img v-bind:src="book.img" alt="" class="img-thumbnail">
                 </a>
             </div>
-            <div class="col-md-9 col-xs-12">
+            <div class="col-md-9 col-xs-9">
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <h4><a v-bind:href="book.address" target="_blank">{{book.title}}</a></h4>
