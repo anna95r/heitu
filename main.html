@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到黑土星球</title>
+    <!--引入JQ-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!--引入bootstrap-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--引入Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body data-spy="scroll" data-target="#cp">
+    <div class="container">
+        <div class="row">
+
+            <!--人物插画-->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div id="jum" class="carousel slide text-center" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#jum" data-slide-to="0" class="active"></li>
+                            <li data-target="#jum" data-slide-to="1"></li>
+                            <li data-target="#jum" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="logo.jpg" alt="" class="center-block">
+                            </div>
+                            <div class="item">
+                                <img src="cenye.jpg" alt="" class="center-block">
+                            </div>
+                            <div class="item">
+                                <img src="xunsheng.jpg" alt="" class="center-block">
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#jum" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#jum" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--导航栏-->
+            <nav class="navbar navbar-default" role="navigation">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#dingmo" data-toggle="pill">丁墨</a></li>
+                    <li><a href="#novel" data-toggle="pill">长篇小说</a></li>
+                    <li><a href="#extra" data-toggle="pill">番外</a></li>
+                    <li><a href="#shortstory" data-toggle="pill">短篇</a></li>
+                </ul>
+            </nav>
+
+            <!--内容-->
+            <div class="tab-content">
+                <!--简介-->
+                <div id="dingmo" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <div class="panel panel-warning">
+                                <div class="panel-body bg-warning">
+                                    <p>笔名：丁墨</p>
+                                    <p>昵称：墨大、黑土、老墨</p>
+                                    <p>老墨的生日：2月5日</p>
+                                    <p>微博：<a href="https://weibo.com/jjdingmo" target="_blank">@丁墨</a></p>
+                                    <p>微信公众号：dingmo66</p>
+                                    <p>作品首发网站：创世中文网</p>
+                                    <p>最新作品：<a href="http://yunqi.qq.com/bk/xdyq/21767552.html" target="_blank">挚野</a></p>
+                                    <hr>
+                                    <p>书友会：<a href="https://weibo.com/u/3860062782?refer_flag=1005055013_" target="_blank">@丁墨书友会</a></p>
+                                    <p>资讯站：<a href="https://weibo.com/u/6502496906?refer_flag=1005055013_" target="_blank">@丁墨资讯站-虎墨沉香楼</a></p>
+                                    <p>丁墨吧官博：<a href="https://weibo.com/u/5169892848?refer_flag=1005050006_" target="_blank">@丁墨吧官博
+                                        </a></p>
+                                    <p>贴吧：<a href="https://tieba.baidu.com/f?fr=wwwt&kw=%E4%B8%81%E5%A2%A8" target="_blank">丁墨吧</a></p>
+                                    <p>书友群：丁墨家的小可爱、丁墨家的小仙女、丁墨家的小公举</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--入群方法详见<a
+                                            href="https://weibo.com/3860062782/GrzfPtLfb" target="_blank">书友会微博</a>（直接搜是搜不到哒，即使搜到了也是进不去哒）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <img src="logo2.jpg" alt="" class="img-thumbnail bg-warning img-circle">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--长篇-->
+                <div id="novel" class="tab-pane">
+                    <!--侧边导航-->
+                    <div class="col-md-2 col-xs-1" id="cp">
+                        <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                            <li><a href="#xuanyi">悬疑</a></li>
+                            <li><a href="#kehuan">科幻</a></li>
+                            <li><a href="#dushi">都市</a></li>
+                            <li><a href="#guyan">古言</a></li>
+                        </ul>
+                    </div>
+                    <!--内容-->
+                    <div class="col-md-10 col-xs-11" id="novelbook">
+                        <div id="xuanyi">
+                            <div v-for="book in xuanyi">
+                                <the-novel v-bind:book="book" v-bind:key="book.id"></the-novel>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div id="kehuan">
+                            <div v-for="book in kehuan">
+                                <the-novel v-bind:book="book" v-bind:key="book.id"></the-novel>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div id="dushi">
+                            <div v-for="book in dushi">
+                                <the-novel v-bind:book="book" v-bind:key="book.id"></the-novel>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div id="guyan">
+                            <div v-for="book in guyan">
+                                <the-novel v-bind:book="book" v-bind:key="book.id"></the-novel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--番外-->
+                <div id="extra" class="tab-pane">
+                    <div class="col-md-offset-1 col-md-10 col-xs-12">
+
+                        <div id="extras">
+                            <div v-bind:key="items[0].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[0].href" data-toggle="collapse">
+                                            <h1>{{items[0].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[0].idname">
+                                        <ul v-for="(extra, index) in lianheextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[1].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[1].href" data-toggle="collapse">
+                                            <h1>{{items[1].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[1].idname">
+                                        <ul v-for="(extra, index) in woniuextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[2].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[2].href" data-toggle="collapse">
+                                            <h1>{{items[2].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[2].idname">
+                                        <ul v-for="(extra, index) in biyanextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[3].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[3].href" data-toggle="collapse">
+                                            <h1>{{items[3].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[3].idname">
+                                        <ul v-for="(extra, index) in qingchengextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[4].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[4].href" data-toggle="collapse">
+                                            <h1>{{items[4].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[4].idname">
+                                        <ul v-for="(extra, index) in meirenextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[5].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[5].href" data-toggle="collapse">
+                                            <h1>{{items[5].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[5].idname">
+                                        <ul v-for="(extra, index) in yueguangextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[6].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[6].href" data-toggle="collapse">
+                                            <h1>{{items[6].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[6].idname">
+                                        <ul v-for="(extra, index) in mofuextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[7].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[7].href" data-toggle="collapse">
+                                            <h1>{{items[7].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[7].idname">
+                                        <ul v-for="(extra, index) in wuyunextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-bind:key="items[8].id">
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading ">
+                                        <a v-bind:href="items[8].href" data-toggle="collapse">
+                                            <h1>{{items[8].name}}</h1>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body collapse" v-bind:id="items[8].idname">
+                                        <ul v-for="(extra, index) in zhiyeextras" v-bind:key="index">
+                                            <li><a v-bind:href="extra.address" target="_blank">{{extra.title}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--短篇-->
+                <div id="shortstory" class="tab-pane">
+                    <div class="col-md-offset-1 col-md-10 col-xs-12">
+                        <div id="shortstorys">
+                            <div v-for="item in items" v-bind:key="item.id">
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <a v-bind:href="item.href" data-toggle="collapse">
+                                            <h1>{{item.name}}</h1>
+                                        </a>
+                                        <div class="collapse" v-bind:id="item.idname">
+                                            <ul v-for="(value,index) in item.links" v-bind:key="index+1">
+                                                <li><a v-bind:href="value" target="_blank">第{{index+1}}章</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p class="shortstory">{{item.ins}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
