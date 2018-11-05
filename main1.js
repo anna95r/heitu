@@ -655,7 +655,7 @@ var app3 = new Vue({
                 id: "s13",
                 href: "#xsnav",
                 idname: "xsnav",
-                name: "相随（连载中）",
+                name: "相随",
                 ins:`
                 陈复明注意到街对面那个女人，已经有好几天了。
 
@@ -665,6 +665,9 @@ var app3 = new Vue({
                 `,
                 links: [
                     "https://mp.weixin.qq.com/s/u_WdCG1sf57BSeMTriq8Ow",
+                    "https://mp.weixin.qq.com/s/_N4FiNtI-LrffZBtdj6x2A",
+                    "https://mp.weixin.qq.com/s/mQd9-XHPX6BSuozwi1FoIg",
+                    "https://mp.weixin.qq.com/s/1rdJee3B8opraogO3WgGkg",
                 ]
             }
         ],
