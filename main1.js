@@ -393,7 +393,8 @@ var app2 = new Vue({
                     "当年志向（20180714以图片形式更新于微信公众号，请自行翻阅公众号全部消息）": "#",
                     "坛子（上）": "https://mp.weixin.qq.com/s/oru_WBjJZpUThMkMiKuJJg",
                     "坛子（中）": "https://mp.weixin.qq.com/s/831gLWeoTJfxH2hpbczh4w",
-                    "坛子（完）": "https://mp.weixin.qq.com/s/feA3J_e2sP8Vqjlg82Fjrw",    
+                    "坛子（完）": "https://mp.weixin.qq.com/s/feA3J_e2sP8Vqjlg82Fjrw",
+                    "舞": "https://mp.weixin.qq.com/s/OBt7Ti8XdxAE7kN0Nqi1rQ",
                 }
             },
         ],
@@ -668,8 +669,25 @@ var app3 = new Vue({
                     "https://mp.weixin.qq.com/s/_N4FiNtI-LrffZBtdj6x2A",
                     "https://mp.weixin.qq.com/s/mQd9-XHPX6BSuozwi1FoIg",
                     "https://mp.weixin.qq.com/s/1rdJee3B8opraogO3WgGkg",
-                ]
-            }
+                ],
+            },
+            {
+                id: "s14",
+                href: "#sfzynav",
+                idname: "sfzynav",
+                name: "十分之一",
+                ins:`
+                申莘第一次遇见他，他的状况其实很糟糕。
+她清楚记得，那是二十三岁那年的冬夜，临近春节。城市里的人明显都少了很多，都往家里跑了。但四处都是过年的气息，商场张灯结彩，到处贴着对联福娃，路上行走的每个人，身上仿佛都带着热乎快乐的一股劲儿。
+只除了那些没有家的人。
+那天申莘走进一家24小时自动银行，想要取款。一眼就看到有个人躺地上。
+她愣了愣。
+ATM机这里到底有层玻璃门，阻断了外头寒冷的空气。那人裹着很厚很脏，看不出原本颜色的棉大衣，从头几乎裹到脚，只露出黑色发顶。脚上是双很单薄破烂的鞋。
+                `,
+                links: [
+                    "https://mp.weixin.qq.com/s/yQ2mE8kZteONjWCwtoLuaA",
+                ],
+            },
         ],
     }
 })
