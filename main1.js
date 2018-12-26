@@ -273,6 +273,7 @@ var app2 = new Vue({
                     "端午趣味龙舟赛": "https://mp.weixin.qq.com/s/-HWzrlrrtb_jahG_UhouZw",
                     "她来听我的演唱会": "https://mp.weixin.qq.com/s/HE-YPzGHTACnhQyVQIZA1Q",
                     "男主们最近都在干什么": "https://mp.weixin.qq.com/s/n7gPKyP-eZeIcTazARaZOQ",
+                    "遇见神探": "https://mp.weixin.qq.com/s/LIL1NcW8q6y5pRy7Q4UoiA",
                 }
             },
             {
@@ -686,7 +687,23 @@ ATM机这里到底有层玻璃门，阻断了外头寒冷的空气。那人裹�
                 `,
                 links: [
                     "https://mp.weixin.qq.com/s/yQ2mE8kZteONjWCwtoLuaA",
+                    "https://mp.weixin.qq.com/s/WQQNbWeK8dqf98ybAIMyTQ",
+                    "https://mp.weixin.qq.com/s/s4mKg18cTHf1vUPYuL_MlA",
                 ],
+            },
+            {
+                id: "s15",
+                href: "#taonav",
+                idname: "taonav",
+                name: "逃",
+                ins: `
+孙素蓿觉得，北京的天空，分明很高很蓝，今天天气这么好，天空就跟面湖似的澄透，哪有传说中的有毒雾霾？
+她拖着箱子，从北京西站走出来，迎面扑来的，是各种气味，人身上的，食物的，汽车的，还有各种说不出的味道，混在一起。到处都是人，各色的人。车子满满地跑在每条路上。她感觉到的是一种新鲜、浑浊的生气。这令她精神一震。
+转了两趟公交——她还不会乘地铁，终于到了刘佳怡租住的小区。这里处于西五环，孙素蓿觉得真够远的，可大学舍友刘佳怡说，这里也算是繁华市区。下车一看，果然如此，高楼林立，车水马龙。傍晚的金黄阳光，倾泻在马路上。北京的马路可真宽啊，她想。
+                `,
+                links:[
+                    "https://mp.weixin.qq.com/s/-dlGBmnYl2MmX5HCv7xmBQ",
+                    ],
             },
         ],
     }
